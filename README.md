@@ -9,5 +9,5 @@ Screenshots for FindMyDevice (using SlimerJS)
 
 ## How Do I Even?
 
-1. Once you have this repo cloned and SlimerJS installed, run `npm start` to run `slimerjs index.js` which loops over each of the supported languages and viewports from the <config.json> file and generates screenshots in the [outputs/images/](outputs/) directory.
-2. Browse the _/outputs/**{{lang}}.md**_ files for the specific locales that you want to verify.
+1. Once you have this repo cloned and SlimerJS installed, run `npm start` to run `slimerjs index.js` which loops over each of the supported languages and viewports from the <config.json> file and generates screenshots in the [output/images/](output/) directory.
+2. Browse the _/output/**{{lang}}.md**_ files for the specific locales that you want to verify.
