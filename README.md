@@ -1,6 +1,6 @@
 # findmydevice-l10n-screens_slimerjs
 
-Screenshots for FindMyDevice (using SlimerJS)
+Screenshots for [FindMyDevice](https://github.com/mozilla-services/FindMyDevice) (using SlimerJS)
 
 ## Installation
 
