@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "rm -rf ./output && mkdir -p output/images && time slimerjs index.js"
+  }
+}
