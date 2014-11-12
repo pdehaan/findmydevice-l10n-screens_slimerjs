@@ -7,17 +7,17 @@ var webpage = require('webpage');
 var CONFIG = fs.read('./config.json');
 CONFIG = JSON.parse(CONFIG);
 
-scrapePages(CONFIG.LANGUAGES, CONFIG.VIEWPORTS);
+scrapePages(CONFIG.SERVER, CONFIG.LANGUAGES, CONFIG.VIEWPORTS);
 
 
-function scrapePages(languages, viewports) {
+function scrapePages(pageUrl, languages, viewports) {
   languages.forEach(function (lang) {
     var mdOutput = '# ' + lang + '\n\n| IMAGE | WIDTH |\n|-------|:-----:|\n';
     viewports.forEach(function (viewport) {
       var resolution = viewport.width + 'x' + viewport.height;
       var filename = 'images/fmd_' + lang + '_' + resolution + '.jpg';
       mdOutput += '| ![' + resolution + '](' + filename + ') | ' + viewport.width + ' |\n';
-      scrapePage('https://find.dev.mozaws.net', lang, viewport, false, filename);
+      scrapePage(pageUrl, lang, viewport, false, filename);
     });
     fs.write('output/' + lang + '.md', mdOutput);
   });
